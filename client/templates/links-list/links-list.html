@@ -1,0 +1,5 @@
+<ul class="chart" *ngIf="links">
+  <zori-link *ngFor="#link of links" class="chart-item" [link]="link"></zori-link>
+</ul>
+
+<div class="loader loader-animate icon-spinner" *ngIf="!links"></div>

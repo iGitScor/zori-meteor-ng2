@@ -1,0 +1,26 @@
+<form
+  [ngFormModel]="linksForm"
+  #f="ngForm"
+  (submit)="addLink(f.value)">
+  <div class="form-group">
+    <label for="url" class="control-label">URL</label>
+    <div>
+      <input type="text" class="form-control" id="url" ngControl="url" />
+    </div>
+  </div>
+  <div class="form-group">
+    <div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ngControl="public"> Public
+        </label>
+      </div>
+    </div>
+  </div><div class="form-group">
+    <div>
+      <button class="btn btn-primary">
+        Add
+      </button>
+    </div>
+  </div>
+</form>

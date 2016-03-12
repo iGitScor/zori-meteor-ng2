@@ -1,0 +1,35 @@
+<header class="text-center">
+  <h1>ZORI</h1>
+</header>
+
+<main class="full-height">
+  <nav class="box--horizontal">
+    <ul id="main-menu" class="list-inline text-center">
+      <!-- <li class="opacity-transition menu__menu-item--accent">
+        <a href="#" class="icon icon-switch" [class.icon-accent]="!user" title="Mon compte">
+          <span class="hide-text">Mon compte</span>
+        </a>
+      </li> -->
+      <li class="opacity-transition menu__menu-item--active">
+        <a [routerLink]="['/LinksList']" class="icon icon-active icon-home" title="Accueil">
+          <span class="hide-text">Accueil</span>
+        </a>
+      </li>
+      <!-- <li class="opacity-transition">
+        <a [routerLink]="['/LinksForm']" class="icon icon-plus" title="Ajouter un lien">
+          <span class="hide-text">Ajouter un lien</span>
+        </a>
+      </li> -->
+    </ul>
+  </nav>
+
+  <section id="front-panel-links" class="box--horizontal text-center clearfix">
+    <router-outlet></router-outlet>
+  </section>
+
+  <footer class="text-center">
+    <blockquote class="opacity-transition">
+      "Chausse tes sandales, et foule le sable qu'aucun esclave n'a pi&eacute;tin&eacute; !"
+    </blockquote>
+  </footer>
+</main>

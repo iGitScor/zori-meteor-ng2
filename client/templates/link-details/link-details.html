@@ -1,0 +1,7 @@
+<form (submit)="saveLink(link)" *ngIf="link">
+  <label>URL</label>
+  <input type="url" [(ngModel)]="link.url">
+
+  <button type="submit">Save</button>
+  <button [routerLink]="['/LinksList']">Cancel</button>
+</form>
