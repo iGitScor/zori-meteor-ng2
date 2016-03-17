@@ -1,0 +1,56 @@
+/*!
+ * zori, by @iGitScor
+ *
+ * github.com/iGitScor | zori-meteor-ng2
+ */
+/*------------------------------------*\
+    #FORM
+\*------------------------------------*/
+
+.form-fields {
+  list-style: none;
+  margin: 0;
+}
+
+.form-fields > li {
+  margin-bottom: 10px;
+}
+
+.form-fields > li:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+/**
+ * Labels
+ *
+ * Define a `.label` class as well as a `label` element. This means we can apply
+ * label-like styling to meta-labels for groups of options where a `label`
+ * element is not suitable, e.g.:
+ *
+   <li class="form-fields">
+       <span class=label>Select an option below:</span>
+       <ul class="multi-list  four-cols">
+           <li>
+               <input /> <label />
+           </li>
+           <li>
+               <input /> <label />
+           </li>
+           <li>
+               <input /> <label />
+           </li>
+           <li>
+               <input /> <label />
+           </li>
+       </ul>
+   </li>
+ *
+ */
+label,
+.label{
+  line-height: @zori-base-font-size;
+  display:block;
+}

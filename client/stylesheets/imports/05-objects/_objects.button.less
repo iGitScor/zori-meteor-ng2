@@ -1,0 +1,55 @@
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+/**
+ * A simple button object.
+ */
+
+@zori-btn-padding:         round(@zori-base-spacing-unit / 2);
+@zori-btn-background:      @secondary-color;
+@zori-btn-color:           #fff;
+@zori-btn-border-width:    1px;
+@zori-btn-border-style:    solid;
+@zori-btn-border-color:    @zori-btn-background;
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ * 6. Fixes odd inner spacing in IE7.
+ * 7. Subtract the border size from the padding value so that buttons do not
+ *    grow larger as we add borders.
+ */
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  font: inherit;
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
+  overflow: visible;
+  background-image: none;
+  background-color: @zori-btn-background; //darkgray
+  border: @zori-btn-border-width @zori-btn-border-style @zori-btn-border-color; //1px solid #5A5A5A;
+  white-space: nowrap;
+  line-height: 2;
+  padding-right: 1em;
+  padding-left: 1em;
+
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    color: @zori-btn-color;
+    text-decoration: none;
+  }
+}
+
+.btn::-moz-focus-inner {
+  border:  0;
+  padding: 0;
+}
