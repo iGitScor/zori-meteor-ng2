@@ -2,6 +2,8 @@ import {Component, View} from 'angular2/core';
 
 import {FormBuilder, Control, ControlGroup, Validators} from 'angular2/common';
 
+import {Router} from 'angular2/router';
+
 import {Links} from 'collections/links';
 
 import {ValidationService} from 'validators/service';
@@ -15,7 +17,7 @@ import {ValidationService} from 'validators/service';
 export class LinksForm {
   linksForm: ControlGroup;
 
-  constructor() {
+  constructor(private router: Router) {
     var fb = new FormBuilder();
     this.linksForm = fb.group({
       url: ['', Validators.compose([Validators.required, ValidationService.urlValidator])],
@@ -32,8 +34,10 @@ export class LinksForm {
         nbClick: 0
       });
 
-      (<Control>this.linksForm.controls['url']).updateValue('');
-      (<Control>this.linksForm.controls['public']).updateValue(false);
+      // TODO: add the possibility to add another link without redirect
+      // (<Control>this.linksForm.controls['url']).updateValue('');
+      // (<Control>this.linksForm.controls['public']).updateValue(false);
+      this.router.navigate(['LinksList']);
     }
   }
 }
